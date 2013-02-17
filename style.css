@@ -108,6 +108,12 @@ visibility: visible;
 input[type="checkbox"] {
 display: none;
 }
+.result {
+height: 100%;
+width: 100%;
+background-size: cover;
+border-radius: 5px;
+}
 
 #cube.panels-backface-invisible figure {
 -webkit-backface-visibility: hidden;
@@ -119,7 +125,7 @@ position: absolute;
 width: 260px;
 height: 260px;
 border: 2px solid red;
-line-height: 85px;
+line-height: 65px;
 text-align: center;
 box-sizing: border-box;
 border-radius:10px;
@@ -155,10 +161,16 @@ html .hover:not(.scale-down) {
 -webkit-transition: -webkit-transform 0.1s ease-in-out 0s;
 -webkit-transform: scale(1);
 }
+
+.hover:nth-child(even) {
+margin-left:7px !important;
+}
+
 html .favourites .hover {
 width: 108px;
 height: 65px;
 display: inline-block;
+box-sizing: border-box;
 }
 .my-favourites .hover {
 margin:auto;
@@ -168,6 +180,8 @@ html .favourites {
 height: 100%;
 width: 100%;
 border: none;
+top: 4px;
+position: relative;
 }
 
 html .circular-btn {
@@ -189,7 +203,7 @@ background-color: transparent;
 }
 
 html .hover {
-box-shadow: 0 24px 44px rgba(0,0,0,0.5);
+box-shadow: 0 1px 1px rgba(0,0,0,0.5);
 background-color: transparent;
 border-radius: 5px;
 margin: 10px;
@@ -251,7 +265,7 @@ padding: 30px;
 
 html input[type="radio"] {
 position: absolute;
-visibility: hidden;
+display: none;
 }
 label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
 cursor: pointer;
