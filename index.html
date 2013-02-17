@@ -1,246 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Copyright Ben Aston 2013. All rights reserved. -->		
-		<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+	<head>		
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
 		<title>Cube Experiment</title>
-		<link href="./style.css" rel="stylesheet">		
-		<meta name="author" content="Ben Aston">				
+		<link href="./style.css" rel="stylesheet" />		
+		<meta name="author" content="Ben Aston" />				
 	</head>
 	<body>		
-			<div class="my-favourites"> 
-				<h2>flag cube</h2>													 
-				<section class="container"> 
-					<input type="checkbox" id="fav" />
-					<input id="f-t" name="favourites-panel" type="radio" checked="checked" />  
-					<input id="f-l" name="favourites-panel" type="radio" />  
-					<input id="f-f" name="favourites-panel" type="radio" />  
-					<input id="f-r" name="favourites-panel" type="radio" />  
-					<input id="f-bottom" name="favourites-panel" type="radio" />  
-					<input id="f-back" name="favourites-panel" type="radio" />  					
-					<div class="cube-controls"> 
-						<table class="cube-net">  
-							<tbody> 
-								<tr>  
-									<td colspan="3"> 										 
-										<label for="f-t">  
-											1								  
-										</label>  
-									</td>  
-								</tr> 
-								<tr> 
-									<td> 										 
-										<label for="f-l">  
-											2					  
-										</label>  
-									</td>						  
-									<td> 										 
-										<label for="f-f">  
-											3								  
-										</label>  
-									</td> 
-									<td>  
-										<label for="f-r">  
-											4 
-										</label>  
-									</td>						  
-								</tr>	  
-								<tr> 
-									<td colspan="3">  
-										<label for="f-bottom">  
-											5 
-										</label>  
-									</td> 									 
-								</tr>					  
-								<tr> 
-									<td colspan="3">  
-										<label for="f-back">  
-											6								  
-										</label>  
-									</td> 									 
-								</tr>					  
-							</tbody> 
-						</table> 
-					</div> 
-					<div id="cube" class="panels-backface-invisible"> 						
-						<figure class="front"> 
-							<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+		<div class="my-favourites"> 
+			<h1>flag cube</h1>													 
+			<section class="container"> 				
+				<input id="f-t" name="favourites-panel" type="radio" checked="checked" />  
+				<input id="f-l" name="favourites-panel" type="radio" />  
+				<input id="f-f" name="favourites-panel" type="radio" />  
+				<input id="f-r" name="favourites-panel" type="radio" />  
+				<input id="f-bottom" name="favourites-panel" type="radio" />  
+				<input id="f-back" name="favourites-panel" type="radio" />  					
+				<div class="cube-controls"> 
+					<table class="cube-net">  
+						<tbody> 
+							<tr>  
+								<td colspan="3"> 										 
+									<label for="f-t">1</label>  
+								</td>  
+							</tr> 
+							<tr> 
+								<td> 										 
+									<label for="f-l">2</label>  
+								</td>						  
+								<td> 										 
+									<label for="f-f">3</label>  
+								</td> 
+								<td>  
+									<label for="f-r">4</label>  
+								</td>						  
+							</tr>	  
+							<tr> 
+								<td colspan="3">  
+									<label for="f-bottom">5</label>  
+								</td> 									 
+							</tr>					  
+							<tr> 
+								<td colspan="3">  
+									<label for="f-back">6</label>  
+								</td> 									 
+							</tr>					  
+						</tbody> 
+					</table> 
+				</div> 
+				<div id="cube" class="panels-backface-invisible"> 						
+					<figure class="front us"> 
+						<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+							<div class="hover"> 
+								<div class="result sheen"></div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen"></div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen"></div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen"></div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen"></div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen"></div>			 
+							</div> 
+						</div> 
+					</figure> 
+					<figure class="back india"> 
+						<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+						</div> 
+					</figure> 
+					<figure class="right france"> 
+						<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div id="foo" class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+						</div> 
+					</figure> 
+					<figure class="left spain"> 
+						<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div id="foo" class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+						</div> 
+					</figure> 
+					<figure class="top italy"> 
+						<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+							<div class="hover"> 
+								<div class="result sheen">	 
+								</div>			 
+							</div> 
+						</div> 
+					</figure> 
+					<figure class="bottom united-kingdom"> 
+						<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
+								<div class="hover"> 
+									<div class="result sheen">	 
+									</div>			 
+								</div> 
 								<div id="foo" class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.signstor.com/us%20flag.jpg); background-position:0 0 !important;">	 
+									<div class="result sheen">	 
 									</div>			 
 								</div> 
 								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.signstor.com/us%20flag.jpg); background-position:0 0 !important;">	 
+									<div class="result sheen">	 
 									</div>			 
 								</div> 
 								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.signstor.com/us%20flag.jpg); background-position:0 0 !important;">	 
+									<div class="result sheen">	 
+									</div>			 	
+								</div> 
+								<div class="hover"> 
+									<div class="result sheen">	 
 									</div>			 
 								</div> 
 								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.signstor.com/us%20flag.jpg); background-position:0 0 !important;">	 
+									<div class="result sheen">	 
 									</div>			 
 								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.signstor.com/us%20flag.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.signstor.com/us%20flag.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-							</div> 
-						</figure> 
-						<figure class="back"> 
-							<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-								<div id="foo" class="hover"> 
-									<div class="result sheen selected" style="background-image: url(http://freefreshwallpapers.com/wp-content/uploads/2013/01/India-flag-2013.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen expired" style="background-image: url(http://freefreshwallpapers.com/wp-content/uploads/2013/01/India-flag-2013.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://freefreshwallpapers.com/wp-content/uploads/2013/01/India-flag-2013.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://freefreshwallpapers.com/wp-content/uploads/2013/01/India-flag-2013.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://freefreshwallpapers.com/wp-content/uploads/2013/01/India-flag-2013.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://freefreshwallpapers.com/wp-content/uploads/2013/01/India-flag-2013.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-							</div> 
-						</figure> 
-						<figure class="right"> 
-							<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://mypamperedpupz.com/January_Newsletter_MyPamperedPupz.com_files/france-paris-flag-i17.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://mypamperedpupz.com/January_Newsletter_MyPamperedPupz.com_files/france-paris-flag-i17.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://mypamperedpupz.com/January_Newsletter_MyPamperedPupz.com_files/france-paris-flag-i17.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div id="foo" class="hover"> 
-									<div class="result sheen" style="background-image: url(http://mypamperedpupz.com/January_Newsletter_MyPamperedPupz.com_files/france-paris-flag-i17.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://mypamperedpupz.com/January_Newsletter_MyPamperedPupz.com_files/france-paris-flag-i17.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://mypamperedpupz.com/January_Newsletter_MyPamperedPupz.com_files/france-paris-flag-i17.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-							</div> 
-						</figure> 
-						<figure class="left"> 
-							<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.videvo.net/wp-content/themes/ViDEVO/ViDEVO_Files/images/Video_Clip_Videos_Images/Spanish%20flag-Flags.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.videvo.net/wp-content/themes/ViDEVO/ViDEVO_Files/images/Video_Clip_Videos_Images/Spanish%20flag-Flags.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div id="foo" class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.videvo.net/wp-content/themes/ViDEVO/ViDEVO_Files/images/Video_Clip_Videos_Images/Spanish%20flag-Flags.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.videvo.net/wp-content/themes/ViDEVO/ViDEVO_Files/images/Video_Clip_Videos_Images/Spanish%20flag-Flags.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.videvo.net/wp-content/themes/ViDEVO/ViDEVO_Files/images/Video_Clip_Videos_Images/Spanish%20flag-Flags.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.videvo.net/wp-content/themes/ViDEVO/ViDEVO_Files/images/Video_Clip_Videos_Images/Spanish%20flag-Flags.jpg); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-							</div> 
-						</figure> 
-						<figure class="top"> 
-							<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-								<div id="foo" class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.investmenteurope.net/IMG/175/213175/italy-flag-370x229.jpg?1331056776); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.investmenteurope.net/IMG/175/213175/italy-flag-370x229.jpg?1331056776); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.investmenteurope.net/IMG/175/213175/italy-flag-370x229.jpg?1331056776); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.investmenteurope.net/IMG/175/213175/italy-flag-370x229.jpg?1331056776); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.investmenteurope.net/IMG/175/213175/italy-flag-370x229.jpg?1331056776); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-								<div class="hover"> 
-									<div class="result sheen" style="background-image: url(http://www.investmenteurope.net/IMG/175/213175/italy-flag-370x229.jpg?1331056776); background-position:0 0 !important;">	 
-									</div>			 
-								</div> 
-							</div> 
-						</figure> 
-						<figure class="bottom"> 
-							<div class="favourites" ondrop="drop(event)" ondragover="allowDrop(event)"> 
-									<div class="hover"> 
-										<div class="result sheen" style="background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x768.jpg); background-position:0 0 !important;">	 
-										</div>			 
-									</div> 
-									<div id="foo" class="hover"> 
-										<div class="result sheen" style="background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x768.jpg); background-position:0 0 !important;">	 
-										</div>			 
-									</div> 
-									<div class="hover"> 
-										<div class="result sheen" style="background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x768.jpg); background-position:0 0 !important;">	 
-										</div>			 
-									</div> 
-									<div class="hover"> 
-										<div class="result sheen" style="background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x768.jpg); background-position:0 0 !important;">	 
-										</div>			 	
-									</div> 
-									<div class="hover"> 
-										<div class="result sheen" style="background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x768.jpg); background-position:0 0 !important;">	 
-										</div>			 
-									</div> 
-									<div class="hover"> 
-										<div class="result sheen" style="background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x768.jpg); background-position:0 0 !important;">	 
-										</div>			 
-									</div> 
-							</div> 
-						</figure> 
-					</div> 
-					<ol class="cube-face-labels"> 
-						<li for="f-t">Italy</li> 
-						<li for="f-l">Spain</li> 
-						<li for="f-f">United States of America</li> 
-						<li for="f-r">France</li> 
-						<li for="f-bottom">United Kingdom</li> 
-						<li for="f-back">India</li> 
-					</ol> 
-				</section>						 
-			</div>			
+						</div> 
+					</figure> 
+				</div> 
+				<ol class="cube-face-labels"> 
+					<li for="f-t">Italy</li> 
+					<li for="f-l">Spain</li> 
+					<li for="f-f">United States of America</li> 
+					<li for="f-r">France</li> 
+					<li for="f-bottom">United Kingdom</li> 
+					<li for="f-back">India</li> 
+				</ol> 
+			</section>						 
+		</div>			
 	</body>
 </html>

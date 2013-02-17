@@ -1,16 +1,33 @@
 @font-face {
-    font-family: pictos;
-    src: url("./pictos.woff");
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: museo-sans-500;
-    src: url("./museo-sans-500.woff");
-    font-weight: normal;
-    font-style: normal;
-  }
+font-family: museo-sans-500;
+src: url("./museo-sans-500.woff");
+font-weight: normal;
+font-style: normal;
+}
+
+.us .result {
+background-image: url(http://www.signstor.com/us%20flag.jpg); 
+}
+
+.india .result {
+background-image: url(http://freefreshwallpapers.com/wp-content/uploads/2013/01/India-flag-2013.jpg);
+}
+
+.france .result {
+background-image: url(http://mypamperedpupz.com/January_Newsletter_MyPamperedPupz.com_files/france-paris-flag-i17.jpg);
+}
+
+.spain .result {
+background-image: url(http://www.videvo.net/wp-content/themes/ViDEVO/ViDEVO_Files/images/Video_Clip_Videos_Images/Spanish%20flag-Flags.jpg);
+}
+
+.italy .result {
+background-image: url(http://www.investmenteurope.net/IMG/175/213175/italy-flag-370x229.jpg?1331056776);
+}
+
+.united-kingdom .result {
+background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x768.jpg);
+}
 
 #f-t:checked ~ .cube-controls label[for="f-t"], 
 #f-l:checked ~ .cube-controls label[for="f-l"], 
@@ -49,14 +66,16 @@ background-size: 2000px auto, auto auto;
 background-repeat: no-repeat, repeat;
 background-position: 0 0;
 background-attachment: fixed;
+padding:50px;
 }
 
-  h1, h2, h3, h4, h5, h6 {
-margin: 10px 0;
+h1 {
+margin: 0 0 50px 0;
 font-weight: bold;
 line-height: 20px;
 color: inherit;
 text-rendering: optimizelegibility;
+text-align:center;
 }
 
 #cube {
@@ -129,6 +148,7 @@ height: 100%;
 width: 100%;
 background-size: cover;
 border-radius: 5px;
+background-position:0 0 !important;
 }
 
 #cube.panels-backface-invisible figure {
@@ -279,8 +299,8 @@ width: 300px;
 html .my-favourites {
 top: 0;
 position: relative;
+width:100%;
 height: 330px;
-padding: 30px;
 -webkit-user-select: none;
 }
 
@@ -310,8 +330,8 @@ width: 130px;
 html .cube-controls {
 width: 130px;
 position: absolute;
-left: 397px;
-top: 0px;
+left: 308px;
+top: 38px;
 }
 
 figure {
@@ -349,4 +369,5 @@ height: 260px;
 position: relative;
 -webkit-perspective: 1000px;
 border: 2px dashed blue !important;
+margin: auto;
 }
