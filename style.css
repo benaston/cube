@@ -293,6 +293,9 @@ left: 397px;
 top: 0px;
 }
 
+figure {
+margin: 0; /*important to ensure rotational origin is centered*/
+}
 html .cube-net label {
 margin: auto !important;
 }
@@ -310,10 +313,6 @@ html label {
 display: block;
 }
 
-html .cube-net {
-position: relative;
-left: 50px;
-}
 table {
 border-collapse: collapse;
 border-spacing: 0;
@@ -327,6 +326,6 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 width: 260px;
 height: 260px;
 position: relative;
-border: none;
 -webkit-perspective: 1000px;
+border: 2px dashed blue !important;
 }
