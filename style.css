@@ -5,6 +5,62 @@ font-weight: normal;
 font-style: normal;
 }
 
+body {
+color: #333;
+font-size: 1.1em;
+font-family: 'museo-sans-500';
+background-image: url("./logo.svg");
+background-size: 2000px auto, auto auto;
+background-repeat: no-repeat, repeat;
+background-position: 0 0;
+background-attachment: fixed;
+padding:50px;
+}
+
+h1 {
+margin: 0 0 50px 0;
+font-weight: bold;
+text-align:center;
+color: inherit;
+}
+
+input[type="checkbox"], input[type="radio"] {
+display: none;
+}
+
+footer {
+clear: both;
+top: 106px;
+position: relative;
+text-align: center;
+}
+
+figure {
+margin: 0; /*important to ensure rotational origin is centered*/
+}
+
+label {
+margin: 0;
+height: 40px;
+width: 40px;
+border-radius: 40px;
+line-height: 37px;
+border: 2px solid #eee;
+-webkit-user-select: none;
+text-align: center;
+cursor:pointer;
+display:block;
+}
+
+.container {
+width: 260px;
+height: 260px;
+position: relative;
+-webkit-perspective: 1000px;
+border: 2px dashed blue !important;
+margin: auto;
+}
+
 .us .result {
 background-image: url(http://www.signstor.com/us%20flag.jpg); 
 }
@@ -37,9 +93,11 @@ background-image: url(http://hqwalls.org/wallpapers/british_flag_wallpaper-1024x
 #f-back:checked ~ .cube-controls label[for="f-back"] {
 border: 2px solid #000;
 }
+
 .cube-face-labels li {
 display:none;
 }
+
 #f-t:checked ~ .cube-face-labels li[for="f-t"], 
 #f-l:checked ~ .cube-face-labels li[for="f-l"], 
 #f-f:checked ~ .cube-face-labels li[for="f-f"], 
@@ -49,117 +107,15 @@ display:none;
 display:block;
 }
 
-#btn-edit-favourites {
-position:relative;
-left:300px;
-top:200px;
-}
- 
-body {
-color: #333;
-margin: 0;
-line-height: 20px;
-font-size: 1.1em;
-font-family: 'museo-sans-500';
-background-image: url("./logo.svg");
-background-size: 2000px auto, auto auto;
-background-repeat: no-repeat, repeat;
-background-position: 0 0;
-background-attachment: fixed;
-padding:50px;
-}
-
-h1 {
-margin: 0 0 50px 0;
-font-weight: bold;
-line-height: 20px;
-color: inherit;
-text-rendering: optimizelegibility;
-text-align:center;
-}
-
-#cube {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 1s;
-}
-
-#cube.panels-backface-invisible figure {
-  -webkit-backface-visibility: hidden;
-}
-#cube .front {
-  -webkit-transform: translateZ(130px);
-}
-#cube .back {
-  -webkit-transform: rotateX(-180deg) translateZ(130px);
-}
-#cube .right {
-  -webkit-transform: rotateY(90deg) translateZ(130px);
-}
-#cube .left {
-  -webkit-transform: rotateY(-90deg) translateZ(130px);
-}
-#cube .top {
-  -webkit-transform: rotateX(90deg) translateZ(130px);
-}
-#cube .bottom {
-  -webkit-transform: rotateX(-90deg) translateZ(130px);
-}
-#cube.show-front,
-#f-f:checked ~ #cube {
-  -webkit-transform: translateZ(-130px);
-}
-#cube.show-back,
-#f-back:checked ~ #cube {
-  -webkit-transform: translateZ(-130px) rotateX(-180deg);
-}
-#cube.show-right,
-#f-r:checked ~ #cube {
-  -webkit-transform: translateZ(-130px) rotateY(-90deg);
-}
-#cube.show-left,
-#f-l:checked ~ #cube {
-  -webkit-transform: translateZ(-130px) rotateY(90deg);
-}
-#cube.show-top,
-#f-t:checked ~ #cube {
-  -webkit-transform: translateZ(-130px) rotateX(-90deg);
-}
-#cube.show-bottom,
-#f-bottom:checked ~ #cube {
-  -webkit-transform: translateZ(-130px) rotateX(90deg);
-}
-
-#cube.show-back, #f-back:checked ~ #cube {
--webkit-transform: translateZ(-130px) rotateX(-180deg);
-}
-
-.search-panel, .results, .result-details, .welcome-panel, .navbar {
-visibility: visible;
-}
-
-input[type="checkbox"] {
-display: none;
-}
-.result {
-height: 100%;
+.cube {  
+position: absolute;
+-webkit-transform-style: preserve-3d;
+-webkit-transition: -webkit-transform 1s;
 width: 100%;
-background-size: cover;
-border-radius: 5px;
-background-position:0 0 !important;
+height: 100%;
 }
 
-#cube.panels-backface-invisible figure {
--webkit-backface-visibility: hidden;
-}
-
-.cube-face-labels {
-list-style:none;
-}
-
-#cube figure {
+.cube figure {
 display: block;
 position: absolute;
 width: 260px;
@@ -169,54 +125,89 @@ line-height: 65px;
 text-align: center;
 box-sizing: border-box;
 border-radius:10px;
-}
-
-#cube.panels-backface-invisible figure {
 -webkit-backface-visibility: hidden;
 }
-#cube .back {
--webkit-transform: rotateX(-180deg) translateZ(130px);
+
+.cube.panels-backface-invisible figure {
+  -webkit-backface-visibility: hidden;
 }
 
-#cube.panels-backface-invisible figure {
--webkit-backface-visibility: hidden;
-}
-#cube .right {
--webkit-transform: rotateY(90deg) translateZ(130px);
+.cube .front {
+  -webkit-transform: translateZ(130px);
 }
 
-#cube .left {
--webkit-transform: rotateY(-90deg) translateZ(130px);
+.cube .back {
+  -webkit-transform: rotateX(-180deg) translateZ(130px);
 }
 
-#cube .top {
--webkit-transform: rotateX(90deg) translateZ(130px);
+.cube .right {
+  -webkit-transform: rotateY(90deg) translateZ(130px);
 }
 
-#cube .bottom {
--webkit-transform: rotateX(-90deg) translateZ(130px);
+.cube .left {
+  -webkit-transform: rotateY(-90deg) translateZ(130px);
 }
 
-html .hover:not(.scale-down) {
--webkit-transition: -webkit-transform 0.1s ease-in-out 0s;
--webkit-transform: scale(1);
+.cube .top {
+  -webkit-transform: rotateX(90deg) translateZ(130px);
+}
+
+.cube .bottom {
+  -webkit-transform: rotateX(-90deg) translateZ(130px);
+}
+
+#f-f:checked ~ .cube {
+  -webkit-transform: translateZ(-130px);
+}
+
+#f-back:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateX(-180deg);
+}
+
+#f-r:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateY(-90deg);
+}
+
+#f-l:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateY(90deg);
+}
+
+#f-t:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateX(-90deg);
+}
+
+#f-bottom:checked ~ .cube {
+  -webkit-transform: translateZ(-130px) rotateX(90deg);
+}
+
+#f-back:checked ~ .cube {
+-webkit-transform: translateZ(-130px) rotateX(-180deg);
+}
+
+.result {
+height: 100%;
+width: 100%;
+background-size: cover;
+border-radius: 5px;
+background-position:0 0;
 }
 
 .hover:nth-child(even) {
 margin-left:7px !important;
 }
 
-html .favourites .hover {
+.favourites .hover {
 width: 108px;
 height: 65px;
 display: inline-block;
 box-sizing: border-box;
 }
+
 .my-favourites .hover {
 margin:auto;
 }
 
-html .favourites {
+.favourites {
 height: 100%;
 width: 100%;
 border: none;
@@ -224,25 +215,7 @@ top: 4px;
 position: relative;
 }
 
-html .circular-btn {
-padding: 0 !important;
-cursor: pointer;
-color: #000;
-border: 3px solid;
-border-color: rgba(0,109,204,0.95) rgba(0,109,204,0.95) rgba(0,109,204,0.95) !important;
-float: right;
-margin-left: 10px;
-min-width: 80px;
-border-radius: 80px !important;
-line-height: 70px !important;
-height: 80px !important;
-font-family: 'pictos';
-font-size: 1.7em;
-text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-background-color: transparent;
-}
-
-html .hover {
+.hover {
 box-shadow: 0 1px 1px rgba(0,0,0,0.5);
 background-color: transparent;
 border-radius: 5px;
@@ -252,51 +225,9 @@ margin-left: auto;
 margin-right: auto;
 }
 
-.favourite-placeholder {
-box-shadow: none !important;
-border: 2px solid silver;
-}
 
-.favourite-placeholder .result {
-background-color: transparent;
-box-sizing: border-box;
-}
 
-button, input, select, textarea {
-margin: 0;
-font-size: 100%;
-vertical-align: middle;
-}
-button, input {
-line-height: normal;
-}
-
-html body {
-color: #333;
-line-height: 20px;
-font-size: 1.1em;
-font-family: 'museo-sans-500';
-}
-
-#cube {
-width: 100%;
-height: 100%;
-position: absolute;
--webkit-transform-style: preserve-3d;
--webkit-transition: -webkit-transform 1s;
-}
-
-.cube-face-labels {
-position: relative;
-top: 281px;
-left: -21px;
-text-align: center;
-}
-
-html .my-favourites {
-width: 300px;
-}
-html .my-favourites {
+.my-favourites {
 top: 0;
 position: relative;
 width:100%;
@@ -304,70 +235,21 @@ height: 330px;
 -webkit-user-select: none;
 }
 
-html input[type="radio"] {
-position: absolute;
-display: none;
-}
-label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
-cursor: pointer;
-}
-button, input, select, textarea {
-margin: 0;
-font-size: 100%;
-vertical-align: middle;
-}
-button, input {
-line-height: normal;
-}
-label, input, button, select, textarea {
-font-size: 14px;
-font-weight: normal;
-line-height: 20px;
-}
-html .cube-controls {
-width: 130px;
-}
-html .cube-controls {
+.cube-controls {
 width: 130px;
 position: absolute;
 left: 308px;
 top: 38px;
 }
 
-figure {
-margin: 0; /*important to ensure rotational origin is centered*/
-}
-html .cube-net label {
+.cube-net label {
 margin: auto !important;
 }
-html label {
-margin: 0;
-height: 40px;
-width: 40px;
-border-radius: 40px;
-line-height: 37px;
-border: 2px solid #eee;
--webkit-user-select: none;
-text-align: center;
-}
-html label {
-display: block;
-}
 
-table {
-border-collapse: collapse;
-border-spacing: 0;
-}
-
-input, button, select, textarea {
-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-.container {
-width: 260px;
-height: 260px;
+.cube-face-labels {
 position: relative;
--webkit-perspective: 1000px;
-border: 2px dashed blue !important;
-margin: auto;
+top: 281px;
+left: -21px;
+text-align: center;
+list-style:none;
 }
